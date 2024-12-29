@@ -14,6 +14,7 @@
  */
 package com.norconex.importer.parser.impl.xfdl;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -108,7 +109,7 @@ public class XFDLParser implements IDocumentParser {
         Document dom = null;
         if (Arrays.equals(signature, MAGIC_BASE64)) {
             // skip first line
-            reader.readLine();
+            BoundedLineReader.readLine(reader, 5_000_000);
 
             // un-encode first
             byte[] compressedContent =
