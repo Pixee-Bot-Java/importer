@@ -38,6 +38,7 @@
     <tika.version>1.27</tika.version>
     <ucar-jj2000.version>5.4</ucar-jj2000.version>
     <webp-imageio.version>0.1.6</webp-imageio.version>
+    <versions.java-security-toolkit>1.2.1</versions.java-security-toolkit>
   </properties>
   <inceptionYear>2009</inceptionYear>
 
@@ -84,6 +85,11 @@
         <groupId>org.jsoup</groupId>
         <artifactId>jsoup</artifactId>
         <version>${jsoup.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.pixee</groupId>
+        <artifactId>java-security-toolkit</artifactId>
+        <version>${versions.java-security-toolkit}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -212,6 +218,10 @@
     </dependency>
       -->
     
+    <dependency>
+      <groupId>io.github.pixee</groupId>
+      <artifactId>java-security-toolkit</artifactId>
+    </dependency>
   </dependencies>
   
   <build>
@@ -284,7 +294,7 @@
   </distributionManagement>
   
   <url>https://opensource.norconex.com/importer</url>
-  <description>Norconex Importer is a Java library and command-line application meant to &quot;parse&quot; and &quot;extract&quot; content out of a computer file as plain text, whatever its format (HTML, PDF, Word, etc). In addition, it allows you to perform any manipulation on the extracted text before importing/using it in your own service or application.</description>
+  <description>Norconex Importer is a Java library and command-line application meant to "parse" and "extract" content out of a computer file as plain text, whatever its format (HTML, PDF, Word, etc). In addition, it allows you to perform any manipulation on the extracted text before importing/using it in your own service or application.</description>
   <issueManagement>
   	<system>GitHub</system>
   	<url>https://github.com/Norconex/importer/issues</url>
